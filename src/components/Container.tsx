@@ -1,28 +1,32 @@
-import "./container.css";
+import './container.css';
+import { motion } from "framer-motion";
 
 
 interface ContainerProps {
-    header: string,
-    text: string,
-    image: string,
-    show: boolean,
+    header: string;
+    text: string;
+    image: string;
 }
 
-const Container = ({header, text, image, show} : ContainerProps) => {
+const Container = ({ header, text, image}: ContainerProps) => {
+    return (
+        <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1.01 }}
+            exit={{ opacity: 0, scale: 0.2 }}
+            transition={{ duration: 2 }}
+            className="container"
+        >
+            <div className={`container_image}`}>
+                <img src={image} alt="image" />
+            </div>
 
-  return (
-    <div className="container">
-
-        <div className={`container_image ${show ? 'image_show' : 'image_hide'}`}>
-            <img src={image} alt="image" />
-        </div>
-
-        <div className={`container_box`}>
-            <div className={`container_header ${show ? 'header_show' : 'header_hide'}`}>{header}</div>
-            <div className={`container_text ${show ? 'text_show' : 'text_hide'}`}><span>* </span>{text}</div>
-        </div>
-    </div>
-  )
+            <div className="container_box">
+                <div className={`container_header`}>{header}</div>
+                <div className={`container_text`}><span>* </span>{text}</div>
+            </div>
+        </motion.div>
+    );
 }
 
-export default Container
+export default Container;
