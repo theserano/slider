@@ -54,7 +54,7 @@ function App() {
       {activeTab === 4 && (
         <Container
           header='Alpha Romeo 4C'
-          text='It is a two-seater, mid-engined sports car. It is a two-seater, mid-engined sports car.'
+          text='It is a two-seater, mid-engined sport car. It is a two-seater, mid-engined sports car.'
           image={alpha}
         />
       )}
