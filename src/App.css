@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-html, body{
+html,
+body {
   margin: 0;
   color: #fff;
   background-color: #092635;
 }
 
-.app{
+.app {
   width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
 }
 
-.btn_group{
+.btn_group {
   position: absolute;
   bottom: 10%;
   right: 10%;
@@ -22,7 +23,8 @@ html, body{
   z-index: 30;
 }
 
-.one, .two{
+.one,
+.two {
   background-color: transparent;
   font-size: 2rem;
   text-align: center;
@@ -35,20 +37,21 @@ html, body{
   cursor: pointer;
 }
 
-.one:hover, .two:hover{
+.one:hover,
+.two:hover {
   background-color: rgb(197, 197, 197);
   border-color: transparent;
 }
 
-p{
+p {
   display: none;
   text-align: center;
   color: #000;
   font-family: "Roboto", sans-serif;
   height: 100vh;
 }
-@media screen and (max-width: 700px){
-  p{
+@media screen and (max-width: 700px) {
+  p {
     display: block;
   }
 }
